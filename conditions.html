@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number Check</title>
+</head>
+<body>
+    <script>
+        let original = 153;   
+        let num = original;
+        let count = 0;
+        let sum = 0;
+
+        
+        let temp = num;
+        while (temp > 0) {
+            count += 1;
+            temp = Math.floor(temp / 10);
+        }
+
+        
+        num = original;
+        while (num > 0) {
+            let r = num % 10;
+            sum += Math.pow(r, count);
+            num = Math.floor(num / 10);
+        }
+
+        if (sum === original) {
+            console.log(original + " is an Armstrong number");
+        } else {
+            console.log(original + " is NOT an Armstrong number");
+        }
+    </script>
+</body>
+</html>
