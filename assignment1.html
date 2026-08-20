@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+
+    <style>
+        .product {
+            display: inline-block;
+            width: 220px;
+            margin: 20px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .product img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style>ONLINE SHOP</h1>
+    
+    
+    <div class="product">
+        <img src="https://i.pinimg.com/236x/07/c6/67/07c667c8045642599888a81f88702118.jpg" alt="Tea">
+        <h2>Tea</h2>
+        <h3>₹120</h3>
+        <button onclick="buyProduct('tea', 120)">Click on Buy</button>
+    </div>
+
+    <div class="product">
+        <img src="https://img.magnific.com/free-photo/top-view-hot-espresso-with-brown-coffee-seeds-brown-wooden-desk-coffee-cup-drink_140725-28168.jpg?semt=ais_test_b&w=740&q=80" alt="Coffee">
+        <h2>Coffee</h2>
+        <h3>₹500</h3>
+        <button onclick="buyProduct('coffee', 500)"> Click on Buy</button>
+    </div>
+
+    <div class="product">
+        <img src="https://www.roopmahalrice.com/wp-content/uploads/2023/01/how-to-cook-rice.jpg" alt="Rice">
+        <h2>Rice</h2>
+        <h3>₹600</h3>
+        <button onclick="buyProduct('rice', 600)">Click on Buy</button>
+    </div>
+
+    <div class="product">
+        <img src="https://images.jdmagicbox.com/quickquotes/images_main/-4xrim6z8.jpg" alt="Sugar">
+        <h2>Sugar</h2>
+        <h3>₹700</h3>
+        <button onclick="buyProduct('sugar', 700)">Click on Buy</button>
+    </div>
+
+    <script>
+
+        function buyProduct(product, price) {
+
+            let quantity = prompt("Enter the quantity:");
+
+            let total = price * quantity;
+
+            document.body.innerHTML +=
+                "<h2>Product: " + product + "</h2>" +
+                "<h2>Quantity: " + quantity + "</h2>" +
+                "<h2>Total Price: ₹" + total + "</h2>";
+        }
+
+    </script>
+
+</body>
+</html>
